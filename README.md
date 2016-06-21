@@ -1,2 +1,0 @@
-# bootstrap
-pryecto de links
