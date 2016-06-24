@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dirección:</strong>
+  <%= @location.address %>
+</p>
+
+<p>
+  <strong>Latitud:</strong>
+  <%= @location.latitude %>
+</p>
+
+<p>
+  <strong>Longitud:</strong>
+  <%= @location.longitude %>
+</p>
+
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+
+
+<%= link_to 'Editar', edit_location_path(@location) ,class:'btn btn-success'%> |
+<%= link_to 'Regresar', locations_path,  class:'btn btn-info' %>
