@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Foto:</strong>
+  <%= image_tag(@pin.photo, :style =>'width:300px') %>
+</p>
+
+<p>
+  <strong>Descripción:</strong>
+  <%= @pin.description %>
+</p>
+
+<%= link_to 'Editar', edit_pin_path(@pin) ,class:'btn btn-success'%> |
+<%= link_to 'Regresar', pins_path,  class:'btn btn-info' %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de Imagenes</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Foto</th>
+      <th>Descripción</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pins.each do |pin| %>
+      <tr>
+        <td><%= image_tag(pin.photo, :style =>'width:300px') %></td>
+        <td><%= pin.description %></td>
+        <td><%= link_to 'Mostrar', pin,class:'btn btn-success' %></td>
+        <td><%= link_to 'Editar', edit_pin_path(pin), class:'btn btn-warning' %></td>
+        <td><%= link_to 'Eliminar', pin,class:'btn btn-danger', method: :delete, data: { confirm: '¿Esta seguro de eliminar este registro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Imagen', new_pin_path,  class:'btn btn-info' %>
