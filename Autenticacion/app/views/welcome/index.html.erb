@@ -1,0 +1,9 @@
+<div id="user_nav">
+  <% if user_signed_in? %>
+      Conectado como <%= current_user.email %>. No eres t&uacute;?
+      <%= link_to "Desconectarse", destroy_user_session_path,class: "btn btn-danger" , :method => :delete%>
+  <% else %>
+      <%= link_to "Alta", new_user_registration_path , class: "btn btn-success"%> o
+      <%= link_to "Login", new_user_session_path, class:"btn btn-primary" %>
+  <% end %>
+</div>
