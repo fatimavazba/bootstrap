@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50">
+
+        <TextView
+            android:id="@+id/id_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="3mm"
+            android:text="Id Frase: "/>
+
+        <TextView
+            android:id="@+id/autor_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_label"
+            android:textSize="3mm"
+            android:text="Autor: "/>
+
+    <TextView
+        android:id="@+id/frase_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/autor_label"
+        android:textSize="3mm"
+        android:text="Frase: "/>
+
+    <TextView
+        android:id="@+id/txt_idFrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/id_label"
+        android:layout_alignBottom="@+id/id_label"
+        android:layout_toRightOf="@+id/id_label"
+        android:textSize="3mm"/>
+
+    <TextView
+        android:id="@+id/txt_autor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/autor_label"
+        android:layout_alignBottom="@+id/autor_label"
+        android:layout_toRightOf="@+id/autor_label"
+        android:textSize="3mm"/>
+
+
+    <TextView
+        android:id="@+id/txt_frase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/frase_label"
+        android:layout_alignBottom="@+id/frase_label"
+        android:layout_toRightOf="@+id/frase_label"
+        android:textSize="3mm"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
